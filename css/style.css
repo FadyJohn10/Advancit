@@ -116,14 +116,14 @@ ol {
   padding: 25px;
   font-size: 100px;
   border-radius: 20px;
-  color: white;
+  color: #66b064;
   margin-left: 20px;
   opacity: 1;
 }
 
 .green span {
   font-size: 65px;
-  color: #66b064;
+  color: #fff;
 }
 
 .bg-dark {
@@ -902,4 +902,11 @@ header {
 #team h6 {
   color: #ccc;
   margin-bottom: 5px;
+  margin-top: -10px;
+}
+
+.fade {
+  font-size: 60px;
+  opacity: 0.5;
+  color: #66b064;
 }
