@@ -910,3 +910,24 @@ header {
   opacity: 0.5;
   color: #66b064;
 }
+
+/* start counter section */
+
+.countersec {
+  background: url("../images/about-quotee.jpg") center center fixed;
+  padding-top: 60px;
+  color: #fff;
+  text-align: center;
+}
+
+.countersec .counter {
+  margin-top: 15px;
+  font-size: 3.2em;
+  font-weight: 700;
+  font-family: fantasy;
+}
+.countersec span {
+  font-size: 1em;
+  margin-bottom: 60px;
+  display: block;
+}

@@ -30,6 +30,33 @@
         wScroll > 700 ? $("#back-to-top").fadeIn() : $("#back-to-top").fadeOut();
     });
 
+    $(window).scroll(function() {
+   var hT = $('.countersec').offset().top,
+       hH = $('.countersec').outerHeight(),
+       wH = $(window).height(),
+       wS = $(this).scrollTop();
+   if (wS > (hT+hH-wH)){
+       const counters = document.querySelectorAll(".counter");
+
+            counters.forEach((counter) => {
+
+                const updateCounter = () => {
+                    const target = +counter.getAttribute("data-target");
+                    const count = +counter.innerText;
+
+                    if (count < target) {
+                        counter.innerText = count + 0.25;
+                        setTimeout(updateCounter, 10);
+                    } else counter.innerText = target;
+
+                };
+
+                updateCounter();
+
+            });
+   }
+});
+
     $(".work").magnificPopup({ delegate: ".lightbox", type: "image" });
     $("#about-slider").owlCarousel({ items: 1, loop: true, margin: 15, nav: true, navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'], dots: true, autoplay: true, animateOut: "fadeOut" });
     $("#testimonial-slider").owlCarousel({ loop: true, margin: 15, dots: true, nav: false, autoplay: true, responsive: { 0: { items: 1 }, 992: { items: 2 } } });
